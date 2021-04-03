@@ -1,0 +1,38 @@
+// GRID
+
+
+$breakpoints: ('XS': 576px,
+  'SM': 768px,
+  'MD': 1024px,
+  'LG': 1200px) !default;
+
+// Extra small screen / phone /
+$screen-xs: 576px;
+
+// Small screen / tablet
+$screen-sm: 768px;
+
+// Medium screen / desktop
+$screen-md: 1024px;
+
+// Large screen / wide desktop
+$screen-lg: 1200px;
+
+
+.container {
+  max-width: 1800px;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media only screen and (max-width: $screen-lg) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media only screen and (max-width: $screen-md) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}

@@ -1,0 +1,167 @@
+// FOOTER
+
+.footer {
+    background-color: $primary-grey;
+
+    &__container {
+        @include flexbox;
+        padding: 50px 100px;
+
+        @media only screen and (max-width: $screen-lg) {
+            @include flex-wrap(wrap);
+            padding: 50px 50px;
+        }
+
+        @media only screen and (max-width: $screen-sm) {
+            padding: 50px 25px;
+        }
+    }
+
+    &__first {
+        @include flex-grow(0.25);
+    }
+
+    &__second {
+        @include flex-grow(0.5);
+
+        @media only screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+            @include flex-wrap(wrap);
+        }
+
+        @media only screen and (max-width: $screen-sm) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__third {
+        @include flex-grow(0.25);
+        @include align-items(flex-end);
+
+        @media only screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+            .btn {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__first,
+    &__second,
+    &__third {
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(space-between);
+
+        @media only screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+            @include flex-direction(row);
+            @include flex-basis(100%);
+            @include align-items(center);
+            margin-bottom: 40px;
+        }
+
+        @media only screen and (max-width: $screen-sm) {
+            @include flex-direction(column);
+            @include flex-grow(1);
+            @include flex-basis(100%);
+        }
+    }
+
+    &__share {
+        a {
+            display: inline-block;
+            color: $text;
+            margin-left: 20px;
+        }
+    }
+
+    &__brand {
+        margin-bottom: 40px;
+
+        @media only screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__adress {
+        color: $text;
+        @extend %font-text;
+        @extend %light;
+        font-size: 0.9em;
+
+        p {
+            margin: 0;
+            margin-top: 3px;
+        }
+    }
+
+    &__menu {
+        @media only screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .menu--footer {
+            @include align-items(center);
+            @include justify-content(center);
+            height: 40px;
+
+            @media only screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+                .menu__item {
+                    padding: 0 15px;
+                }
+            }
+
+            @media only screen and (max-width: $screen-sm) {
+                @include flex-wrap(wrap);
+                height: auto;
+                border-bottom: solid 1px $white;
+                border-top: solid 1px $white;
+                padding: 20px 0;
+
+                .menu__item {
+                    @include flex-basis(100%);
+                    padding: 10px 0;
+                    text-align: center;
+
+                    .menu__link {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__copyright-menu {
+        @media only screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .menu--footer {
+            justify-content: center;
+
+            @media only screen and (max-width: $screen-sm) {
+                @include flex-wrap(wrap);
+                height: auto;
+                border-bottom: solid 1px $white;
+                padding: 20px 0;
+
+                .menu__item {
+                    @include flex-basis(100%);
+                    padding: 10px 0;
+                    text-align: center;
+                }
+            }
+
+            .menu__item,
+            .menu__item a {
+                color: $text;
+                @extend %font-main;
+                @extend %light;
+                font-size: 14px;
+                text-decoration: none;
+            }
+        }
+    }
+}

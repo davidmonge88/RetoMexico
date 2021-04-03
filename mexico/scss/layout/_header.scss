@@ -1,0 +1,51 @@
+// HEADER
+.header {
+  &__content {
+    position: relative;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    padding: 30px 50px;
+  }
+
+  .logo {
+    padding: 0 25px;
+  }
+
+  .menu.menu--header.responsive {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0;
+    width: calc(100% - 50px);
+    padding: 0 25px;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0px 2px 0px 0px rgba(246,228,94,1);
+    -moz-box-shadow: inset 0px 2px 0px 0px rgba(246,228,94,1);
+    box-shadow: inset 0px 2px 0px 0px rgba(246,228,94,1);
+    background-color: $primary-grey;
+    @include justify-content(space-evenly);
+    @include transition(all 0.3s linear);
+    @include flex-wrap(wrap);
+    .menu__item {
+      padding: 0 25px;
+    }
+    &.show {
+      height: auto;
+      padding: 20px 25px;
+      @media only screen and (min-width: $screen-lg) {
+        display: none;
+      }
+      .menu__item {
+        padding: 25px 25px;
+      }
+    }
+  }
+
+  // HEADER RESPONSIVE
+  @media only screen and (max-width: $screen-lg) {
+    .menu.menu--header:not(.responsive) {
+      display: none;
+    }
+  }
+}

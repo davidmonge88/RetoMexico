@@ -1,0 +1,51 @@
+// BUTTONS
+
+.btn {
+  padding: 10px 25px;
+  margin-bottom: 40px;
+  font-size: 1em;
+  @extend %font-main;
+  @extend %regular;
+  border: none;
+
+  &--primary {
+    color: $primary-grey;
+    background-color: $primary-yellow;
+
+    &:focus {
+      color: $primary-grey;
+    }
+
+    &:hover {
+      color: $primary-yellow;
+      background-color: $primary-grey;
+    }
+
+    &:active {
+      color: $primary-yellow;
+      background-color: $primary-grey;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menu--responsive__button {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-65%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  @media only screen and (max-width: $screen-lg) {
+    display: block;
+  }
+  .fas {
+    font-size: 1.3em;
+    color: $text;
+  }
+}

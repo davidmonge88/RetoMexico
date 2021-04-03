@@ -1,0 +1,54 @@
+// FONTS
+
+body {
+  font-size: 1.125rem;
+}
+
+%font-main {
+  font-family: "BrandonGrotesque", sans-serif;
+}
+
+%font-text {
+  font-family: "Sarabun", sans-serif;
+}
+
+// FONT WEIGHT
+
+%thin {
+  font-weight: 100;
+}
+
+%extralight {
+  font-weight: 200;
+}
+
+%light {
+  font-weight: 300;
+}
+
+%regular {
+  font-weight: 400;
+}
+
+%medium {
+  font-weight: 500;
+}
+
+%semibold {
+  font-weight: 600;
+}
+
+%bold {
+  font-weight: 700;
+}
+
+%extrabold {
+  font-weight: 800;
+}
+
+
+// TEXT STYLE
+
+%italic {
+  font-style: italic;
+}

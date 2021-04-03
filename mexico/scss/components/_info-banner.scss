@@ -1,0 +1,31 @@
+//INFO BANNER 
+
+.section-info__text {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(0);
+    color: $primary-grey;
+    @extend %font-text;
+    @extend %extralight;
+    @extend %italic;
+    font-size: 4.5em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation: translate 10s infinite linear 0.75s;
+
+    @media only screen and (max-width: $screen-md) {
+        font-size: 3.5em;
+    }
+}
+
+//ANIMATION TEXT
+@keyframes translate {
+    from {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    to {
+        transform: translateY(-50%) translateX(-120%);
+    }
+}

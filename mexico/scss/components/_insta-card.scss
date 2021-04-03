@@ -1,0 +1,49 @@
+// INSTAGRAM CARDS
+
+.insta-card {
+  @include flex-grow(1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media only screen and (max-width: $screen-lg) {
+    @include flex-basis(50%);
+  }
+
+  @media only screen and (max-width: $screen-xs) {
+    @include flex-basis(100%);
+    min-height: 200px;
+  }
+
+  &__info {
+    @include opacity(0);
+    @include background-opacity($black, 0.5);
+    height: 100%;
+    width: 100%;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    @include transition(all 0.3s ease-in-out 0s);
+
+    &:hover {
+      @include opacity(1);
+      cursor: pointer;
+    }
+
+    .likes,
+    .comments {
+      color: $text;
+      @extend %font-text;
+      @extend %light;
+      font-size: 1.6em;
+
+      .far {
+        margin-right: 10px;
+      }
+    }
+
+    .likes {
+      margin-right: 20px;
+    }
+  }
+}

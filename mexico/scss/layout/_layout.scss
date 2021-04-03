@@ -1,0 +1,27 @@
+@import 
+'header',
+'content',
+'footer';
+
+
+body {
+  background: linear-gradient(180deg, rgb(80, 77, 77) 0%, rgba(255, 255, 255, 1) 100%);
+  &.bg1 {
+    background: linear-gradient(180deg, rgb(150, 36, 36) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+  &.bg2 {
+    background: linear-gradient(180deg, rgb(199, 202, 36) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+  &.bg3 {
+    background: linear-gradient(180deg, rgb(36, 202, 77) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+  &.bg4 {
+    background: linear-gradient(180deg, rgb(36, 122, 202) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+  &.bg5 {
+    background: linear-gradient(180deg, rgb(202, 36, 152) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+  &.bg5 {
+    background: linear-gradient(180deg, rgb(240, 121, 11) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+}
